@@ -15,7 +15,7 @@ Often we want to use preconditions to indicate that a code path should never be 
 guard let self = self else { fatalError() }
 ```
 
-We also can make use of `precondition` and `preconditionFailure` to indicate when execution has reached an unrecoverable state which should not be possible. For Dispatch, we can use `dispatchPrecondition` to confirm execution is either on a specific queue or not and raise a runtime exception if it is not which results in useful logs which point directly to that line of code to more quickly understand the root cause.
+We also can make use of `precondition` and `preconditionFailure` to indicate when execution has reached an unrecoverable state which should not be possible. For Dispatch, we can use `dispatchPrecondition` to confirm execution is either on a specific queue or not. It will raise a runtime exception if it is not which results in useful crash logs. Instead of crashing at some later point, which is much harder to trace back to the root cause, these crash logs point directly to that line of code which triggered teh crash to more quickly understand the root cause.
 
 By using these test assertions it is possible to create tests which ensure these fatal errors are being raised as intended.
 
