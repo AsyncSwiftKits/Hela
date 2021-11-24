@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CwlCatchException",
+        "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
+        "state": {
+          "branch": null,
+          "revision": "35f9e770f54ce62dd8526470f14c6e137cef3eea",
+          "version": "2.1.1"
+        }
+      },
+      {
+        "package": "CwlPreconditionTesting",
+        "repositoryURL": "https://github.com/brennanMKE/CwlPreconditionTesting.git",
+        "state": {
+          "branch": "saagar-fix",
+          "revision": "96235c1e60f1a668a825d4423b3b240aaa8733c8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
