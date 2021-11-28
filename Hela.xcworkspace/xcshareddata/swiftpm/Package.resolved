@@ -12,11 +12,11 @@
       },
       {
         "package": "CwlPreconditionTesting",
-        "repositoryURL": "https://github.com/brennanMKE/CwlPreconditionTesting.git",
+        "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
         "state": {
-          "branch": "saagar-fix",
-          "revision": "96235c1e60f1a668a825d4423b3b240aaa8733c8",
-          "version": null
+          "branch": null,
+          "revision": "c21f7bab5ca8eee0a9998bbd17ca1d0eb45d4688",
+          "version": "2.1.0"
         }
       }
     ]
