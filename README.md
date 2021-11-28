@@ -19,7 +19,7 @@ Type safety can provide a lot of protection with support from the compiler makin
 precondition(Thread.isMainThread, "Must not run on main thread")
 
 DispatchQueue.main.sync {
-    // run code on main threead
+    // run code on main thread
 }
 ```
 
