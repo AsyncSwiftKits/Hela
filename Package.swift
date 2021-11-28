@@ -20,12 +20,14 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/mattgallagher/CwlPreconditionTesting.git", .upToNextMajor(from: "2.1.0"))
     ],
+
     targets: [
         .target(
             name: "Hela",
             dependencies: [
                 .product(name: "CwlPreconditionTesting", package: "CwlPreconditionTesting")
-            ]
+            ],
+            linkerSettings: [.linkedFramework("XCTest")]
         ),
         .testTarget(
             name: "HelaTests",
