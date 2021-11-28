@@ -15,12 +15,11 @@ let package = Package(
     products: [
         .library(
             name: "Hela",
-            targets: ["Hela"]),
+            targets: ["Hela"])
     ],
     dependencies: [
         .package(url: "https://github.com/mattgallagher/CwlPreconditionTesting.git", .upToNextMajor(from: "2.1.0"))
     ],
-
     targets: [
         .target(
             name: "Hela",

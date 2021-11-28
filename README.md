@@ -11,6 +11,10 @@ The following assertions are supported. These functions are built on top of [Cwl
 
 This package includes tests which show how these functions can be used. Note that the underlying package supports iOS and macOS only currently. For tests which are running on tvOS and watchOS an `XCTSkip` error will be thrown to indicate that the test was skipped so that it does not simply fail. These functions take a closure is run. The first one expects second one does not. If an fatal exception is raised the first assert function will pass and if not the second assert function will pass. These assert functions mirror the non-fatal error assert functions included with XCTest.
 
+## Build Failures with XCTest
+
+When Swift packages are added to an Xcode project it is usually linked by the primary target which is normally the intended build behavior. But the normal build target is not a test target and should not be linking Hela and won't be linking XCTest. Removing Hela as a linked target will also remove the Swift package from the project, so first add Hela to your test target as a target dependency and also link it. Then remove it from the primary target as a linked dependency. Then your build should work.
+
 ## Why
 
 Type safety can provide a lot of protection with support from the compiler making many bugs or invalid conditions to be impossible. Preconditions allow developers to impose strict requirements at runtime to compliment type safety. Apple prefers to have apps to be killed when it the problem is a result of programmer error. Placing preconditions in code to verify assumptions and enforce requirements can help developers understand why their code is not running properly long before it reaches production. Below is example of code which must run on the main thread and will sync to it with the requirement that it not already on the main thread. It may be necessary to do this work on the main thread before leaving the current code block and documentation would note that running this code should be off the main thread.
