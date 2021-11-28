@@ -1,7 +1,7 @@
 import XCTest
 @testable import Hela
 
-class PreconditionCatchingTests: XCTestCase {
+class HelaTests: XCTestCase {
 
     func testRunnerWithoutFatalError() throws {
             let runner = Runner()

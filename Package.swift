@@ -2,6 +2,7 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
+import Foundation
 
 let package = Package(
     name: "Hela",
@@ -17,16 +18,18 @@ let package = Package(
             targets: ["Hela"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/brennanMKE/CwlPreconditionTesting.git", branch: "saagar-fix")
+        .package(url: "https://github.com/mattgallagher/CwlPreconditionTesting.git", .upToNextMajor(from: "2.1.0"))
     ],
     targets: [
         .target(
             name: "Hela",
             dependencies: [
                 .product(name: "CwlPreconditionTesting", package: "CwlPreconditionTesting")
-            ]),
+            ]
+        ),
         .testTarget(
             name: "HelaTests",
-            dependencies: ["Hela"]),
+            dependencies: ["Hela"]
+        ),
     ]
 )
