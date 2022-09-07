@@ -1,5 +1,7 @@
 # Hela
 
+![CI](https://github.com/brennanMKE/Hela/actions/workflows/ci.yml/badge.svg)
+
 Assertions for XCTest which prevent fatal errors causing the process to die.
 
 The following assertions are supported. These functions are built on top of [CwlPreconditionTesting] which was created by Matt Gallagher of [Cocoa with Love]. That package allows for intercepting the signal from fatal errors to prevent the process from dying.
